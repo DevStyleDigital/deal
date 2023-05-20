@@ -15,16 +15,19 @@ const SOCIALS = [
     id: 1,
     link: 'https://instagram.com',
     Icon: InstagramIcon,
+    name: 'Instagram',
   },
   {
     id: 2,
     link: 'https://facebook.com',
     Icon: FacebookIcon,
+    name: 'Facebook',
   },
   {
     id: 3,
     link: 'https://linkedin.com',
     Icon: LinkedinIcon,
+    name: 'Linkedin',
   },
 ];
 const CONTACTS = [
@@ -55,7 +58,7 @@ export const Footer = () => (
               Fale com a gente
             </span>
 
-            <ul className="flex items-center w-full justify-between max-lg:justify-center max-lg:gap-8 max-lg:flex-wrap">
+            <div className="flex items-center w-full justify-between max-lg:justify-center max-lg:gap-8 max-lg:flex-wrap">
               <ul className="flex flex-col gap-1 lg:w-1/2">
                 {CONTACTS.map((contact) => (
                   <li key={contact.id}>
@@ -66,17 +69,19 @@ export const Footer = () => (
                   </li>
                 ))}
               </ul>
-              <li className="lg:w-1/2">
-                <span className="flex items-center gap-2">
-                  <PinIcon className="fill-black h-8 w-auto" />
-                  <span className="leading-4 lg:whitespace-nowrap">
-                    Nononononononon, 00
-                    <br />
-                    nonoonono - Nononoo / NO
+              <ul className="lg:w-1/2">
+                <li>
+                  <span className="flex items-center gap-2">
+                    <PinIcon className="fill-black h-8 w-auto" />
+                    <span className="leading-4 lg:whitespace-nowrap">
+                      Nononononononon, 00
+                      <br />
+                      nonoonono - Nononoo / NO
+                    </span>
                   </span>
-                </span>
-              </li>
-            </ul>
+                </li>
+              </ul>
+            </div>
           </div>
           <div className="lg:w-1/2">
             <span className="font-bold text-xl block mb-6 max-lg:text-center">
@@ -86,7 +91,7 @@ export const Footer = () => (
             <ul className="flex items-center gap-3 max-lg:justify-center">
               {SOCIALS.map((social) => (
                 <li key={social.id}>
-                  <Link target="_blank" href={social.link}>
+                  <Link target="_blank" href={social.link} aria-label={social.name}>
                     <social.Icon className="w-10 h-10" />
                   </Link>
                 </li>

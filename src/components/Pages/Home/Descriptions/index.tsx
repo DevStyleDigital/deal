@@ -12,13 +12,9 @@ import Desc6 from '../../../../assets/imgs/descriptions/desc-6.png';
 const DESCRIPTIONS = [Desc6, Desc5, Desc4, Desc3, Desc2, Desc1];
 
 export const Descriptions = () => (
-  <section className="max-w px-2 flex h-fit gap-4 justify-center max-[1313px]:flex-col">
-    <div className="relative block max-[1313px]:h-fit max-[1313px]:w-full h-fit w-fit 1.5xl:ml-10 min-[1365px]:ml-5">
-      <Image
-        src={Backdrop2}
-        alt=""
-        className="min-[1314px]:h-[calc((16.5rem*2)+1rem)] h-72 min-[1314px]:w-[30rem] w-full"
-      />
+  <section className="max-w px-2 grid h-[38rem] max-[1560px]:h-[30rem] max-xl:justify-center max-xl:grid-cols-1 max-xl:h-fit max-xl:flex max-xl:flex-wrap gap-4 grid-cols-5 grid-rows-2">
+    <div className="relative block w-full h-full max-xl:h-96 col-span-2 row-span-2">
+      <Image src={Backdrop2} alt="" className="w-full h-full" />
       <div className="absolute top-0 flex text-center flex-col gap-10 left-0 w-full h-full justify-center items-center">
         <span className="block font-bold text-3xl text-secondary-400">
           Siga @domus
@@ -33,15 +29,8 @@ export const Descriptions = () => (
         </Link>
       </div>
     </div>
-    <div className="flex flex-wrap gap-4 justify-center">
-      {DESCRIPTIONS.map((desc, i) => (
-        <Image
-          key={i}
-          src={desc}
-          alt=""
-          className="max-w-[16.5rem] w-full h-full max-h-[16.5rem]"
-        />
-      ))}
-    </div>
+    {DESCRIPTIONS.map((desc, i) => (
+      <Image key={i} src={desc} alt="" className="xl:w-full xl:h-full w-64 h-auto" />
+    ))}
   </section>
 );

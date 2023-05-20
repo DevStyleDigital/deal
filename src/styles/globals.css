@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.max-w {
+ max-width: 1560px;
+ @apply mx-auto w-full
+}
+
+.linear-primary {
+  background: linear-gradient(0deg, #e30613 1.32%, #72111d 91.8%);
+  background: -webkit-linear-gradient(0deg, #e30613 1.32%, #72111d 91.8%);
+}
+.linear-tertiary {
+  background: linear-gradient(0deg, #ffce41 0%, #e5a80e 100%);
+  background: -webkit-linear-gradient(0deg, #ffce41 0%, #e5a80e 100%);
+}
+.clip-text {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.btn {
+  @apply linear-tertiary text-black flex justify-center w-fit rounded-lg py-3 px-7 font-bold
+}
+
+.swiper-reset {
+  --swiper-theme-color: black;
+  --swiper-navigation-sides-offset: 6rem;
+  --swiper-navigation-size: 2rem;
+}
+
+.swiper-reset > .swiper {
+  width: 75%;
+}
+
+@media (max-width: 1052px) {
+  .swiper-reset {
+    --swiper-navigation-sides-offset: 2rem;
+  }
+
+  .swiper-reset > .swiper {
+    width: 85%;
+  }
+}
+
+@media (max-width: 780px) {
+  .swiper-reset {
+    --swiper-navigation-sides-offset: 1rem;
+  }
+
+  .swiper-reset > .swiper {
+    width: 85%;
+  }
+}

@@ -1,5 +1,6 @@
 import type { AppProps } from 'next/app';
 import { Lato } from 'next/font/google';
+import Head from 'next/head';
 
 import 'styles/globals.css';
 
@@ -10,7 +11,14 @@ const lato = Lato({
 });
 
 const App = ({ Component, pageProps }: AppProps) => {
-  return <Component {...pageProps} />;
+  return (
+    <>
+      <Head>
+        <title>Domos</title>
+      </Head>
+      <Component {...pageProps} />
+    </>
+  );
 };
 
 export default App;

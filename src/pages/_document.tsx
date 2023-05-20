@@ -3,7 +3,9 @@ import { Html, Head, Main, NextScript } from 'next/document';
 const Document = () => {
   return (
     <Html lang="en">
-      <Head />
+      <Head>
+        <meta name="description" content="Domos - uma marca para você chamar de lar" />
+      </Head>
       <body>
         <Main />
         <NextScript />

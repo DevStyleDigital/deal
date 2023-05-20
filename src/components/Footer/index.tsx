@@ -56,7 +56,7 @@ export const Footer = () => (
             </span>
 
             <ul className="flex items-center w-full justify-between max-lg:justify-center max-lg:gap-8 max-lg:flex-wrap">
-              <div className="flex flex-col gap-1 lg:w-1/2">
+              <ul className="flex flex-col gap-1 lg:w-1/2">
                 {CONTACTS.map((contact) => (
                   <li key={contact.id}>
                     <span className="flex items-center gap-2">
@@ -65,7 +65,7 @@ export const Footer = () => (
                     </span>
                   </li>
                 ))}
-              </div>
+              </ul>
               <li className="lg:w-1/2">
                 <span className="flex items-center gap-2">
                   <PinIcon className="fill-black h-8 w-auto" />

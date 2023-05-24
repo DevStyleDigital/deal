@@ -1,37 +1,46 @@
-import BannerHero from '../../../../assets/imgs/banner-hero.png';
-import Mascot from '../../../../assets/imgs/mascot.png';
+import { Slider } from 'components/Slider';
+import Banner1 from '../../../../assets/imgs/banners/banner-1.png';
+import Banner2 from '../../../../assets/imgs/banners/banner-2.png';
+import Banner3 from '../../../../assets/imgs/banners/banner-3.png';
+import BannerMobile1 from '../../../../assets/imgs/banners/banner-mobile-1.png';
+import BannerMobile2 from '../../../../assets/imgs/banners/banner-mobile-2.png';
+import BannerMobile3 from '../../../../assets/imgs/banners/banner-mobile-3.png';
 import Image from 'next/image';
 import Link from 'next/link';
 
+const IMAGES = [
+  { id: 1, image: Banner1, mobile: BannerMobile1, alt: '', href: '/' },
+  { id: 2, image: Banner2, mobile: BannerMobile2, alt: '', href: '/' },
+  { id: 3, image: Banner3, mobile: BannerMobile3, alt: '', href: '/' },
+];
+
 export const Hero = () => (
   <section className="w-full h-fit relative">
-    <Image
-      src={BannerHero}
-      alt=""
-      priority
-      className="w-full object-cover -object-[4rem] h-[50vh]"
-    />
-    <div className="mx-auto absolute h-full w-full top-0 left-0">
-      <div className="top-1/2 h-fit w-fit min-[931px]:left-1/2 max-[930px]:right-16 max-sm:-translate-x-1/2 -translate-y-1/2 absolute max-sm:left-1/2">
-        <div className="flex flex-col w-fit gap-4 max-sm:text-center max-sm:items-center">
-          <span className="text-4xl font-bold text-secondary-400 whitespace-nowrap">
-            Uma marca
-            <br /> para você <br />
-            chamar de Lar
-          </span>
-          <Link href="" className="py-2 px-6 uppercase w-fit rounded-md bg-secondary-400">
-            <span className="linear-tertiary clip-text font-bold">Ver ofertas</span>
+    <Slider.Root
+      style={{ width: '100%' }}
+      loop
+      disableArrows
+      autoplay={{ delay: 1000 * 10 }} // 10s
+      navigation={{ nextEl: '', prevEl: '' }}
+    >
+      {IMAGES.map((image) => (
+        <Slider.Slide key={image.id} className="w-full">
+          <Link href={image.href} className="w-full h-fit">
+            <Image
+              src={image.image}
+              alt={image.alt}
+              priority
+              className="w-full object-cover -object-[4rem] h-[50vh] max-md:hidden"
+            />
+            <Image
+              src={image.mobile}
+              alt={image.alt}
+              priority
+              className="w-full object-cover object-top h-[75vh] md:hidden"
+            />
           </Link>
-        </div>
-      </div>
-      <div className="max-[930px]:hidden">
-        <Image
-          src={Mascot}
-          alt=""
-          priority
-          className="absolute bottom-0 right-[10%] h-[38rem] max-[1439px]:max-h-96 w-auto max-[1710px]:right-10 max-[1116px]:right-2 max-[1116px]:max-h-72"
-        />
-      </div>
-    </div>
+        </Slider.Slide>
+      ))}
+    </Slider.Root>
   </section>
 );

@@ -4,7 +4,7 @@ const Document = () => {
   return (
     <Html lang="en">
       <Head>
-        <meta name="description" content="Domos - uma marca para você chamar de lar" />
+        <meta name="description" content="Domus - uma marca para você chamar de lar" />
       </Head>
       <body>
         <Main />

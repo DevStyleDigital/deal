@@ -7,7 +7,11 @@ import 'swiper/css/navigation';
 
 SwiperCore.use([Navigation, Autoplay]);
 
-const SliderRoot = ({ children, ...props }: GTypes.FCChildren & SwiperProps) => {
+const SliderRoot = ({
+  children,
+  disableArrows,
+  ...props
+}: GTypes.FCChildren & SwiperProps & { disableArrows?: boolean }) => {
   return (
     <div className="swiper-reset relative">
       <Swiper
@@ -22,10 +26,12 @@ const SliderRoot = ({ children, ...props }: GTypes.FCChildren & SwiperProps) => 
       >
         {children}
       </Swiper>
-      <div className="swiper-arrows">
-        <div className="swiper-button-next" />
-        <div className="swiper-button-prev" />
-      </div>
+      {!disableArrows && (
+        <div className="swiper-arrows">
+          <div className="swiper-button-next" />
+          <div className="swiper-button-prev" />
+        </div>
+      )}
     </div>
   );
 };

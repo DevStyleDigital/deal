@@ -25,8 +25,8 @@ export const Header = () => {
 
           <span className="flex items-center gap-2">
             <WhatsIcon />
-            <span className="text-xs">00</span>
-            <span>00000.0000</span>
+            <span className="text-xs">15</span>
+            <span>99650.6060</span>
           </span>
         </div>
       </div>

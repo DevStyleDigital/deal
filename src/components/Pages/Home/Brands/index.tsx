@@ -28,20 +28,31 @@ export const Brands = () => (
 
     <Slider.Root
       loop
-      slidesPerView={1}
-      spaceBetween={4}
-      centeredSlides
       autoplay={{ delay: 600 }}
+      slidesPerView={5}
+      spaceBetween={2 * 16}
       breakpoints={{
-        1316: { slidesPerView: 5, centeredSlides: false, spaceBetween: 20 },
-        1102: { slidesPerView: 3, centeredSlides: false, spaceBetween: 20 },
-        552: { slidesPerView: 2, centeredSlides: false, spaceBetween: 20 },
+        0: {
+          slidesPerView: 1,
+        },
+        400: {
+          slidesPerView: 2,
+        },
+        639: {
+          slidesPerView: 3,
+        },
+        865: {
+          slidesPerView: 4,
+        },
+        1000: {
+          slidesPerView: 5,
+        },
       }}
     >
       {BRANDS.map((brand, i) => (
         <Slider.Slide
           key={i}
-          className="select-none max-w-[209px] border-gray-400 border-[1px] rounded-xl"
+          className="select-none border-gray-400 border-[1px] rounded-xl"
         >
           <div className="flex items-center justify-center">
             <div className="w-full flex items-center justify-center p-2 h-[94px]">

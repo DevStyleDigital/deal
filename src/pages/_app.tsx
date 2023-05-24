@@ -2,6 +2,8 @@ import type { AppProps } from 'next/app';
 import { Lato } from 'next/font/google';
 import Head from 'next/head';
 
+import 'swiper/swiper.min.css';
+import 'swiper/css/navigation';
 import 'styles/globals.css';
 
 const lato = Lato({

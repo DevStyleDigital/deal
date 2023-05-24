@@ -11,6 +11,10 @@
   background: linear-gradient(0deg, #e30613 1.32%, #72111d 91.8%);
   background: -webkit-linear-gradient(0deg, #e30613 1.32%, #72111d 91.8%);
 }
+.linear-primary\/180 {
+  background: linear-gradient(180deg, #e30613 1.32%, #72111d 91.8%);
+  background: -webkit-linear-gradient(180deg, #e30613 1.32%, #72111d 91.8%);
+}
 .linear-tertiary {
   background: linear-gradient(0deg, #ffce41 0%, #e5a80e 100%);
   background: -webkit-linear-gradient(0deg, #ffce41 0%, #e5a80e 100%);
@@ -46,7 +50,8 @@
 
 @media (max-width: 780px) {
   .swiper-reset {
-    --swiper-navigation-sides-offset: 1rem;
+    --swiper-navigation-sides-offset: 0.25rem;
+    --swiper-navigation-size: 1rem;
   }
 
   .swiper-reset > .swiper {

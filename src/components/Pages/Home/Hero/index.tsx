@@ -10,7 +10,14 @@ import Link from 'next/link';
 
 const IMAGES = [
   { id: 1, image: Banner1, mobile: BannerMobile1, alt: '', href: '/' },
-  { id: 2, image: Banner2, mobile: BannerMobile2, alt: '', href: '/' },
+  {
+    id: 2,
+    image: Banner2,
+    mobile: BannerMobile2,
+    alt: '',
+    href: '/',
+    className: 'object-right-top',
+  },
   { id: 3, image: Banner3, mobile: BannerMobile3, alt: '', href: '/' },
 ];
 
@@ -36,7 +43,9 @@ export const Hero = () => (
               src={image.mobile}
               alt={image.alt}
               priority
-              className="w-full object-cover object-top h-[75vh] md:hidden"
+              className={`w-full object-cover h-[75vh] md:hidden${
+                image.className ? ` ${image.className}` : ''
+              }`}
             />
           </Link>
         </Slider.Slide>

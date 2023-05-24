@@ -2,9 +2,6 @@ import React from 'react';
 import SwiperCore, { Navigation, Autoplay } from 'swiper';
 import { Swiper, SwiperSlide, type SwiperProps } from 'swiper/react';
 
-import 'swiper/css';
-import 'swiper/css/navigation';
-
 SwiperCore.use([Navigation, Autoplay]);
 
 const SliderRoot = ({

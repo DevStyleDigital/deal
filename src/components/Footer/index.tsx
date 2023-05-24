@@ -13,7 +13,7 @@ import { CoreLogo } from 'components/Logo/core';
 const SOCIALS = [
   {
     id: 1,
-    link: 'https://instagram.com',
+    link: 'https://instagram.com/domusconstrucao?igshid=MmIzYWVlNDQ5Yg==',
     Icon: InstagramIcon,
     name: 'Instagram',
   },
@@ -33,12 +33,12 @@ const SOCIALS = [
 const CONTACTS = [
   {
     id: 1,
-    text: '(00) 00000.0000',
+    text: '(15) 99650.6060',
     Icon: WhatsIcon,
   },
   {
     id: 2,
-    text: 'email@domus.com.br',
+    text: 'financeiro@domusmateriaisconstrucao.com.br',
     Icon: MailIcon,
   },
 ];
@@ -74,9 +74,9 @@ export const Footer = () => (
                   <span className="flex items-center gap-2">
                     <PinIcon className="fill-black h-8 w-auto" />
                     <span className="leading-4 lg:whitespace-nowrap">
-                      Nononononononon, 00
+                      Rua Benedito Antunes Ribeiro,
                       <br />
-                      nonoonono - Nononoo / NO
+                      721 | Araçoiaba da Serra
                     </span>
                   </span>
                 </li>

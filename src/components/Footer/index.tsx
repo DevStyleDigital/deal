@@ -41,18 +41,18 @@ export const Footer = () => (
       />
       <div className="relative z-10 w-full h-full pb-16">
         <div className="max-w flex max-lg:flex-col max-[814px]:flex-col p-4 pt-8 h-full gap-12 xl:gap-24">
-          <div className="lg:w-1/2">
+          <div className="lg:w-[70%]">
             <span className="font-bold text-xl block mb-6 max-lg:text-center">
               Fale com a gente
             </span>
 
-            <div className="flex items-center w-full justify-between max-lg:justify-center max-lg:gap-8 max-lg:flex-wrap">
-              <ul className="flex flex-col gap-1 lg:w-1/2">
+            <div className="flex items-center w-full justify-between gap-x-8 max-lg:justify-center max-lg:gap-8 max-lg:flex-wrap">
+              <ul className="flex flex-col gap-3 lg:w-1/2">
                 {CONTACTS.map((contact) => (
-                  <li key={contact.id}>
-                    <span className="flex items-center gap-2">
-                      <contact.Icon className="fill-black" />
-                      <span className="break-all">{contact.text}</span>
+                  <li key={contact.id} className="w-fit">
+                    <span className="flex items-center gap-2 w-fit">
+                      <contact.Icon className="fill-black h-4 w-auto" />
+                      <span className="max-md:break-all leading-5">{contact.text}</span>
                     </span>
                   </li>
                 ))}
@@ -61,7 +61,7 @@ export const Footer = () => (
                 <li>
                   <span className="flex items-center gap-2">
                     <PinIcon className="fill-black h-8 w-auto" />
-                    <span className="leading-4 lg:whitespace-nowrap">
+                    <span className="leading-5 lg:whitespace-nowrap">
                       Rua Benedito Antunes Ribeiro, 721
                       <br />
                       Araçoiaba da Serra - Jd. Maria da Glória

@@ -14,11 +14,11 @@ export const Header = () => {
           className="w-full h-full object-cover object-center"
         />
       </div>
-      <div className="max-w flex py-8 max-ml:flex-col relative sm:px-16 p-4 h-full w-full items-center gap-8 max-lg:justify-between">
+      <div className="max-w flex py-8 justify-between max-ml:flex-col relative sm:px-16 p-4 h-full w-full items-center gap-8 max-lg:justify-between">
         <div className="h-fit">
           <Logo className="w-60 h-auto" />
         </div>
-        <div className="text-white flex max-sm:flex-col h-fit w-fit items-center font-bold gap-4 sm:gap-16 lg:ml-[15vw] mx-0">
+        <div className="text-white flex max-sm:flex-col h-fit w-fit items-center font-bold gap-4 sm:gap-16 mx-0">
           <span className="uppercase sm:whitespace-nowrap text-center">
             Frete Gratis para toda região*
           </span>

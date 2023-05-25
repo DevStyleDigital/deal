@@ -17,18 +17,6 @@ const SOCIALS = [
     Icon: InstagramIcon,
     name: 'Instagram',
   },
-  {
-    id: 2,
-    link: 'https://facebook.com',
-    Icon: FacebookIcon,
-    name: 'Facebook',
-  },
-  {
-    id: 3,
-    link: 'https://linkedin.com',
-    Icon: LinkedinIcon,
-    name: 'Linkedin',
-  },
 ];
 const CONTACTS = [
   {
@@ -64,7 +52,7 @@ export const Footer = () => (
                   <li key={contact.id}>
                     <span className="flex items-center gap-2">
                       <contact.Icon className="fill-black" />
-                      <span>{contact.text}</span>
+                      <span className="break-all">{contact.text}</span>
                     </span>
                   </li>
                 ))}
@@ -74,9 +62,9 @@ export const Footer = () => (
                   <span className="flex items-center gap-2">
                     <PinIcon className="fill-black h-8 w-auto" />
                     <span className="leading-4 lg:whitespace-nowrap">
-                      Rua Benedito Antunes Ribeiro,
+                      Rua Benedito Antunes Ribeiro, 721
                       <br />
-                      721 | Araçoiaba da Serra
+                      Araçoiaba da Serra - Jd. Maria da Glória
                     </span>
                   </span>
                 </li>

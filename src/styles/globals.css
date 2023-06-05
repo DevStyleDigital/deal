@@ -27,34 +27,3 @@
 .btn {
   @apply linear-tertiary text-black flex justify-center w-fit rounded-lg py-3 px-7 font-bold
 }
-
-.swiper-reset {
-  --swiper-theme-color: black;
-  --swiper-navigation-sides-offset: 6rem;
-  --swiper-navigation-size: 2rem;
-}
-
-.swiper-reset > .swiper {
-  width: 75%;
-}
-
-@media (max-width: 1052px) {
-  .swiper-reset {
-    --swiper-navigation-sides-offset: 2rem;
-  }
-
-  .swiper-reset > .swiper {
-    width: 85%;
-  }
-}
-
-@media (max-width: 780px) {
-  .swiper-reset {
-    --swiper-navigation-sides-offset: 0.25rem;
-    --swiper-navigation-size: 1rem;
-  }
-
-  .swiper-reset > .swiper {
-    width: 85%;
-  }
-}

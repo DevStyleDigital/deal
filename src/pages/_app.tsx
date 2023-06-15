@@ -16,7 +16,7 @@ const App = ({ Component, pageProps }: AppProps) => {
   return (
     <>
       <Head>
-        <title>Domus | Materiais de Construção</title>
+        <title>Deal Empreendimentos</title>
       </Head>
       <Component {...pageProps} />
     </>

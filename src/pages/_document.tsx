@@ -4,7 +4,8 @@ const Document = () => {
   return (
     <Html lang="en">
       <Head>
-        <meta name="description" content="Domus - uma marca para você chamar de lar" />
+        <meta name="description" content="deal empreendimentos" />
+        <link rel="shortcut icon" href="/deal.png" type="image/x-icon" />
       </Head>
       <body>
         <Main />

@@ -5,9 +5,9 @@ import Link from "next/link"
 import Whatsapp from "assets/svg/whatsapp"
 const Hero = () => {
     return (
-        <div className="w-full h-[95vh] relative">
-            <Image src={Banner} className="w-full h-full" alt="banner" width={5760} height={3280} />
-            <div className="w-[70%] p-[2rem] flex flex-col items-center gap-[3rem] absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 bg-transparent max-sm:w-[100%]">
+        <div className="w-full h-fit min-h-[95vh] relative flex justify-center items-center">
+            <Image src={Banner} className="w-full h-full object-cover absolute" alt="banner" width={5760} height={3280} />
+            <div className="w-[70%] p-[2rem] flex flex-col items-center relative z-20 gap-[3rem] bg-transparent max-sm:w-[100%]">
                 <Image src={logo} alt="logo" width={1784} height={1248} className="w-[30%] max-md:w-[70%]" />
                 <h1 className="text-white text-[1.5rem] text-center w-[80%] leading-8 font-medium max-xl:text-[1rem] max-xl:leading-6 max-xl:w-[90%]">O que torna a Deal Empreendimentos incomparável é a atenção 
                     e o respeito aos clientes e a transparência em todos os projetos à execução.</h1>
